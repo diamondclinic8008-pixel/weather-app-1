@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app">
+
+    <!-- Welcome screen -->
+    <section class="screen welcome" id="welcome">
+      <h1>Discover The<br>Weather In Your City</h1>
+
+      <div class="welcome-icon">🌦️</div>
+
+      <p>Get to know your weather status and
+         detailed precipitation forecast.</p>
+
+      <button id="startBtn">GET STARTED</button>
+    </section>
+
+    <!-- Main weather screen -->
+    <section class="screen weather hidden" id="weather">
+      <div class="top-bar">
+        <span>☁️ Weather</span>
+        <span>⋮</span>
+      </div>
+
+      <form id="searchForm" class="search-box">
+        <input type="text" id="cityInput"
+               placeholder="Search location..."
+               required>
+        <button type="submit">⌕</button>
+      </form>
+
+      <div class="current-weather">
+        <h2 id="cityName">Dhaka</h2>
+        <h1 id="temperature">19°</h1>
+        <p id="description">Mostly Clear</p>
+        <div class="big-icon" id="weatherIcon">🌤️</div>
+        <p id="weatherDetails">Loading weather...</p>
+      </div>
+
+      <div class="forecast-heading">
+        <h3>Hourly Forecast</h3>
+        <span>Next 5 hours</span>
+      </div>
+
+      <div class="hourly" id="hourlyForecast"></div>
+
+      <h3 class="section-title">Weather Details</h3>
+
+      <div class="details">
+        <div class="detail-card">
+          <span>💧 Humidity</span>
+          <strong id="humidity">--</strong>
+        </div>
+        <div class="detail-card">
+          <span>💨 Wind Speed</span>
+          <strong id="wind">--</strong>
+        </div>
+      </div>
+
+      <p id="message" class="message"></p>
+    </section>
+    <section class="screen search-page hidden" id="searchPage">
+
+  <div class="search-header">
+    <button id="backBtn">←</button>
+    <h3>Weather</h3>
+  </div>
+
+  <form class="location-search" id="locationForm">
+    <input
+      type="text"
+      id="locationInput"
+      placeholder="Search Location"
+      required
+    >
+    <button type="submit">🔍</button>
+  </form>
+
+  <div class="city-list" id="cityList">
+
+    <div class="city-card">
+      <div>
+        <h1>19°</h1>
+        <p>H:21° L:17°</p>
+        <h3>Dhaka</h3>
+        <small>Mostly Clear</small>
+      </div>
+      <img src="images/cloud.png" alt="Cloudy">
+    </div>
+
+    <div class="city-card">
+      <div>
+        <h1>20°</h1>
+        <p>H:23° L:18°</p>
+        <h3>West Greenwich</h3>
+        <small>Light Rain</small>
+      </div>
+      <img src="images/rain.png" alt="Rainy">
+    </div>
+
+    <div class="city-card">
+      <div>
+        <h1>13°</h1>
+        <p>H:15° L:10°</p>
+        <h3>New York</h3>
+        <small>Showers</small>
+      </div>
+      <img src="images/storm.png" alt="Stormy">
+    </div>
+
+  </div>
+
+</section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
